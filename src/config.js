@@ -15,12 +15,12 @@
 const config = {
   // ── Couple ──────────────────────────────────────────────
   couple: {
-    brideFirstName: 'Anaya',
-    brideFullName: 'Anaya Khan',
-    groomFirstName: 'Zayan',
-    groomFullName: 'Zayan Ahmed',
+    brideFirstName: 'Ahmed',
+    brideFullName: 'Ahmed Khan',
+    groomFirstName: 'Layla',
+    groomFullName: 'Layla Ahmed',
     // Shown inside the wax seal on the envelope, e.g. "Z & A"
-    initials: 'Z & A',
+    initials: 'A & L',
     // Small monogram glyph shown above the initials (optional, keep short)
     monogram: '❦',
   },
@@ -32,7 +32,7 @@ const config = {
     weddingDateISO: '2026-12-29T18:30:00',
     // Human-friendly strings shown around the site
     dayLabel: 'Sunday',
-    dateLabel: '29 December 2025',
+    dateLabel: '29 December 2026',
     timeLabel: '6:30 PM',
     occasion: 'We joyfully invite you to celebrate the Barat of our beloved',
     blessing: 'A joyful life together, forever',
