@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-ink font-body antialiased;
+  overflow-x: hidden;
+}
+
+/* Respect reduced motion preference across the app */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Reusable eyebrow / label style used across sections */
+.label-caps {
+  letter-spacing: 0.35em;
+  font-family: 'Cormorant Garamond', serif;
+  text-transform: uppercase;
+}
+
+/* Thin gold divider used between content blocks */
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, theme('colors.gold.DEFAULT'), transparent);
+}
+
+/* Soft embossed floral-paper background used on secondary sections */
+.embossed-paper {
+  background-color: #F7F3EA;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(201,166,107,0.10) 0, transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(201,166,107,0.08) 0, transparent 45%),
+    radial-gradient(circle at 20% 85%, rgba(201,166,107,0.09) 0, transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(201,166,107,0.10) 0, transparent 45%);
+}
+
+/* Focus states — visible, on-brand, never removed */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid theme('colors.gold.DEFAULT');
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: theme('colors.gold.light');
+  color: theme('colors.ink.DEFAULT');
+}
